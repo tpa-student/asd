@@ -64,8 +64,11 @@ public class Fleet {
 	public boolean equals(Object obj) {
 		if(((Fleet)obj).owner.getId()==owner.getId())
 			if(((Fleet)obj).numberOfShips==numberOfShips)
-				if(((Fleet)obj).sourcePlanet.getId()==sourcePlanet.getId())					
-					return true;
+				if(((Fleet)obj).sourcePlanet.getId()==sourcePlanet.getId())
+					if(((Fleet)obj).destinationPlanet.getId()==destinationPlanet.getId())
+						if(((Fleet)obj).totalTurns==totalTurns)
+							if(((Fleet)obj).remainingTurns==remainingTurns)
+								return true;
 		return false;
 	}
 	@Override
