@@ -61,6 +61,14 @@ public class Fleet {
 	 * 
 	 */
 	@Override
+	public boolean equals(Object obj) {
+		if(((Fleet)obj).owner.getId()==owner.getId())
+			if(((Fleet)obj).numberOfShips==numberOfShips)
+				if(((Fleet)obj).sourcePlanet.getId()==sourcePlanet.getId())					
+					return true;
+		return false;
+	}
+	@Override
 	public String toString() {
 		// F <owner:int> <ships:int> <source:int> <destination:int>
 		// <total_turns:int> <remaining_turns:int>
